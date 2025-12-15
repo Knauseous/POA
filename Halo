@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Halo Approach</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 48px;
+            background: #000000;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .header h1 {
+            font-size: 48px;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 12px;
+            letter-spacing: -0.025em;
+        }
+        .header p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #D1D5DB;
+            max-width: 896px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        .core-section {
+            background: #F9FAFB;
+            border-bottom: 1px solid #E5E7EB;
+            padding: 32px;
+        }
+        .core-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111827;
+            margin: 0 0 8px 0;
+        }
+        .core-section .subtitle {
+            font-size: 14px;
+            font-weight: 500;
+            color: #6B7280;
+            margin-bottom: 24px;
+        }
+        .flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 896px;
+            margin: 0 auto;
+        }
+        .flow-step {
+            text-align: center;
+        }
+        .flow-circle {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .flow-circle.draft { background: #3B82F6; }
+        .flow-circle.review { background: #2563EB; }
+        .flow-circle.send { background: #1D4ED8; }
+        .flow-circle.signed { background: #1E40AF; }
+        .flow-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #374151;
+        }
+        .flow-line {
+            flex: 1;
+            height: 4px;
+            background: #93C5FD;
+            margin: 0 16px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: #E5E7EB;
+        }
+        .grid-item {
+            background: white;
+            padding: 24px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .badge.pre-commit { background: #DBEAFE; color: #1D4ED8; }
+        .badge.review { background: #DBEAFE; color: #1D4ED8; }
+        .badge.send { background: #E0E7FF; color: #4338CA; }
+        .badge.post-signed { background: #F3E8FF; color: #7C3AED; }
+        .badge.continuous { background: #CCFBF1; color: #0F766E; }
+        .grid-item h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #111827;
+            margin: 0 0 4px 0;
+        }
+        .grid-item .description {
+            font-size: 14px;
+            color: #6B7280;
+            margin-bottom: 16px;
+        }
+        .trigger {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 8px;
+        }
+        .bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-top: 6px;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        .bullet.blue { background: #3B82F6; }
+        .bullet.indigo { background: #6366F1; }
+        .bullet.purple { background: #A855F7; }
+        .bullet.teal { background: #14B8A6; }
+        .trigger-text {
+            font-size: 12px;
+            color: #374151;
+            line-height: 1.5;
+        }
+        .footer {
+            background: #F9FAFB;
+            padding: 24px 32px;
+            border-top: 1px solid #E5E7EB;
+            text-align: center;
+        }
+        .footer p {
+            font-size: 14px;
+            color: #6B7280;
+            font-style: italic;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>The Halo Approach</h1>
+            <p>Engagements is the moment firms commit to work. Once that happens, everything else — payment, documents, work kickoff — should naturally follow from that single system of record.</p>
+        </div>
+
+        <!-- Main Card -->
+        <div class="card">
+            <!-- Core Flow Section -->
+            <div class="core-section">
+                <h2>ENGAGEMENTS</h2>
+                <p class="subtitle">Pre-commit system of record</p>
+                
+                <div class="flow">
+                    <div class="flow-step">
+                        <div class="flow-circle draft">1</div>
+                        <p class="flow-label">DRAFT</p>
+                    </div>
+                    <div class="flow-line"></div>
+                    <div class="flow-step">
+                        <div class="flow-circle review">2</div>
+                        <p class="flow-label">REVIEW</p>
+                    </div>
+                    <div class="flow-line"></div>
+                    <div class="flow-step">
+                        <div class="flow-circle send">3</div>
+                        <p class="flow-label">SEND</p>
+                    </div>
+                    <div class="flow-line"></div>
+                    <div class="flow-step">
+                        <div class="flow-circle signed">4</div>
+                        <p class="flow-label">SIGNED</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid">
+                <!-- Proposals -->
+                <div class="grid-item">
+                    <span class="badge pre-commit">PRE-COMMIT</span>
+                    <h3>Proposals</h3>
+                    <p class="description">Pre-commit pipeline</p>
+                    <div class="trigger">
+                        <div class="bullet blue"></div>
+                        <p class="trigger-text">Trigger: Opportunity identified, before Engagement created</p>
+                    </div>
+                </div>
+
+                <!-- Agreement Structure -->
+                <div class="grid-item">
+                    <span class="badge review">REVIEW STAGE</span>
+                    <h3>Agreement Structure</h3>
+                    <p class="description">MSA, renewals</p>
+                    <div class="trigger">
+                        <div class="bullet blue"></div>
+                        <p class="trigger-text">Trigger: Multi-engagement relationships, renewal needs</p>
+                    </div>
+                </div>
+
+                <!-- Portal -->
+                <div class="grid-item">
+                    <span class="badge send">SEND STAGE</span>
+                    <h3>Portal</h3>
+                    <p class="description">Client documents</p>
+                    <div class="trigger">
+                        <div class="bullet indigo"></div>
+                        <p class="trigger-text">Trigger: "Can we share files with client?" at Send moment</p>
+                    </div>
+                </div>
+
+                <!-- Payments -->
+                <div class="grid-item">
+                    <span class="badge post-signed">POST-SIGNED</span>
+                    <h3>Payments</h3>
+                    <p class="description">Scope → Cash</p>
+                    <div class="trigger">
+                        <div class="bullet purple"></div>
+                        <p class="trigger-text">Trigger: Engagement signed, scope now becomes invoiceable</p>
+                    </div>
+                </div>
+
+                <!-- Projects/Work -->
+                <div class="grid-item">
+                    <span class="badge post-signed">POST-SIGNED</span>
+                    <h3>Projects / Work</h3>
+                    <p class="description">Delivery kickoff</p>
+                    <div class="trigger">
+                        <div class="bullet purple"></div>
+                        <p class="trigger-text">Trigger: "Work starts now, need project tracking" at Signed</p>
+                    </div>
+                </div>
+
+                <!-- Proof & Intelligence -->
+                <div class="grid-item">
+                    <span class="badge continuous">CONTINUOUS</span>
+                    <h3>Proof & Intelligence</h3>
+                    <p class="description">Time saved, risk reduced</p>
+                    <div class="trigger">
+                        <div class="bullet teal"></div>
+                        <p class="trigger-text">Spans entire lifecycle — continuous learning from every engagement</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>Engagements is adopted first; expansion happens because it operationalizes commitment</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
